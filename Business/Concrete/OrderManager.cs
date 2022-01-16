@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -15,14 +16,29 @@ namespace Business.Concrete
             _orderDal = orderDal;
         }
 
-        public List<Order> GetAll()
+        public IResult Add(Order order)
         {
-            return _orderDal.GetAll();
+            throw new NotImplementedException();
         }
 
-        public Order GetById(int OrderId)
+        public IResult Delete(Order order)
         {
-            return _orderDal.Get(o => o.OrderId == OrderId);
+            throw new NotImplementedException();
+        }
+
+        public IDataResult<List<Order>> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IDataResult<Order> GetById(int OrderId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IResult Update(Order order)
+        {
+            throw new NotImplementedException();
         }
     }
 }

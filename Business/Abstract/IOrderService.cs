@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Utilities.Results;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,7 +8,10 @@ namespace Business.Abstract
 {
     public interface IOrderService
     {
-        List<Order> GetAll();
-        Order GetById(int OrderId);
+        IDataResult<List<Order>> GetAll();
+        IDataResult<Order> GetById(int OrderId);
+        IResult Add(Order order);
+        IResult Delete(Order order);
+        IResult Update(Order order);
     }
 }
